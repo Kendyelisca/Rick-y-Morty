@@ -1,5 +1,6 @@
 import React from 'react';
 import '../index.css';
+import mage from '../assets/rick.webp';
 
 const Location = ({ name, type, dimension, residents }) => {
   return (
@@ -17,6 +18,12 @@ const Location = ({ name, type, dimension, residents }) => {
         <li>
           <span>Population: </span>
           {residents.length}
+          {residents.length === 0 && (
+            <div className="nohab">
+              <p>No habitants to show now..</p>
+              <img className="mage" src={mage} alt="" />
+            </div>
+          )}
         </li>
       </ul>
     </section>

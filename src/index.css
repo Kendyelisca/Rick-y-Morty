@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+body {
+  position: relative;
+  transition: 0.5s;
+}
 .big-container {
   position: relative;
 }
@@ -35,11 +39,16 @@
 
 }
 .input-submit {
-  width: 15%;
+  width: 10%;
+  font-size: 18px;
+  font-weight: 600;
   margin-right: 20px;
   height: 30px;
   border-radius: 10px;
-  border: 2px solid rgb(47, 47, 139);
+  border: 2px solid rgb(177, 177, 240);
+  transition: 0.5s;
+  background-color: rgb(14, 194, 140);
+  color: white;
 }
 .input-text:hover {
   border: 1px solid rgb(46, 46, 138);
@@ -61,6 +70,7 @@
   text-align: center;
   color: white;
   line-height: 25px;
+  padding-top: 50px;
 }
 .pink-bar ul li {
   list-style: none;
@@ -75,7 +85,7 @@
 } */
 .resident {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background-color: ghostwhite;
   width: 100%;
   align-items: center; 
@@ -85,10 +95,11 @@
   margin: 20px;
   max-width: 100%;
   border: 2px solid rgb(13, 192, 252);
-  border-radius: 5px;
+  border-radius: 20px;
   background-color: rgb(20, 69, 90);
   transition: 0.5s;
   padding: 10px;
+  position: relative;
 }
 .container img {
   border-radius: 5px;
@@ -96,6 +107,7 @@
 }
 .container:hover {
   transform: scale(1.1);
+
 }
 .card___ul li {
   list-style: none;
@@ -117,11 +129,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
-
-
+  margin-top: 250px;
+}
+.image1 {
+  max-width: 35px;
+  height: 30px;
+  background-color: rgb(42, 231, 99);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: 0.5;
+  animation: cool;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.image2 {
+  max-width: 35px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  
 }
 
+.nohab {
+  width: 100%;
+  height: 200px;
+  margin-bottom: -100px;
+}
+.mage {
+  max-width: 200px;
+  height: 200px;
+  margin-bottom: -250px;
+  border-radius: 50%;
+  border: 5px solid rgb(57, 125, 173);
+}
+@keyframes cool {
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.3;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 768px) {
   .resident {
     grid-template-columns: repeat(2, 1fr);
@@ -129,6 +188,11 @@
 }
 @media (max-width: 568px) {
   .resident {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    
   }
+  .container {
+    font-size: 15px;
+  }
+  
 }

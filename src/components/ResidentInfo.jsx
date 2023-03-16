@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../index.css';
+import image1 from '../assets/heart.svg';
+import image2 from '../assets/skull.png';
 
 const ResidentInfo = ({ urlResident }) => {
   const [residentInfo, setResidentInfo] = useState(null);
@@ -28,11 +30,17 @@ const ResidentInfo = ({ urlResident }) => {
             <ul className="card___ul">
               <li>
                 <span>Specie: </span>
-                {residentInfo.specie}
+                {residentInfo.species}
               </li>
               <li>
                 <span>Status: </span>
                 {residentInfo.status}
+                {residentInfo.status === 'Alive' && (
+                  <img className="image1" src={image1} alt="Alive Icon" />
+                )}
+                {residentInfo.status === 'Dead' && (
+                  <img className="image2" src={image2} alt="Dead Icon" />
+                )}
               </li>
               <li>
                 <span>Origin: </span>
