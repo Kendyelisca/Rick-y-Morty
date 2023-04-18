@@ -7,36 +7,43 @@
 body {
   position: relative;
   transition: 0.5s;
+  background-color: #05292E;
+  font-family: sans-serif;
 }
 .big-container {
   position: relative;
 }
-.topIm{
-  height: 400px;
+.topIm {
+  height: 500px;
   width: 100%;
 }
 
 .topIm img {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   height: 100%;
 }
+.topText {
+  padding-top: 30px;
+  color: #20b2aa;
+  text-align: center;
+}
+
 .form {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(216, 198, 198);
+  background-color: #062226;
   margin-top: 40px;
 }
 
 .input-text {
-  width: 60%;
+  width: 50%;
   margin: 20px;
   height: 30px;
-
 }
 .input-submit {
   width: 10%;
@@ -61,7 +68,7 @@ body {
 .pink-bar {
   width: 100%;
   height: 200px;
-  background-color: rgb(57, 125, 173);
+  background-color: #062226;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -74,9 +81,11 @@ body {
 }
 .pink-bar ul li {
   list-style: none;
+  
 }
 .pink-bar h2 {
   padding-bottom: 20px;
+  color: #7fff00;
 }
 /* .img-container {
   width: 100%;
@@ -86,29 +95,35 @@ body {
 .resident {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: ghostwhite;
+  
   width: 100%;
-  align-items: center; 
+  align-items: center;
 }
 .container {
   color: white;
   margin: 20px;
   max-width: 100%;
-  border: 2px solid rgb(13, 192, 252);
-  border-radius: 20px;
-  background-color: rgb(20, 69, 90);
+  border-radius: 15px;
+  padding-bottom: 20px;
+  background-color:#062226;
   transition: 0.5s;
-  padding: 10px;
   position: relative;
 }
+.container ul li {
+  padding-left: 10px;
+}
+.container h3 {
+  padding-left: 10px;
+  
+}
+.imgpro{
+  border-radius: 15px 15px 0 0;
+}
 .container img {
-  border-radius: 5px;
   width: 100%;
+  object-fit: cover;
 }
-.container:hover {
-  transform: scale(1.1);
 
-}
 .card___ul li {
   list-style: none;
 }
@@ -124,7 +139,7 @@ body {
 .footer {
   height: 70px;
   width: 100%;
-  background-color: rgb(57, 125, 173);
+  background-color: #062226;
   color: white;
   display: flex;
   justify-content: center;
@@ -134,7 +149,8 @@ body {
 .image1 {
   max-width: 35px;
   height: 30px;
-  background-color: rgb(42, 231, 99);
+  background-color: #7fff00;
+  border-radius: 50%;
   position: absolute;
   top: 20px;
   left: 20px;
@@ -146,11 +162,11 @@ body {
 .image2 {
   max-width: 35px;
   height: 30px;
+  border-radius: 50%;
   background-color: rgb(255, 255, 255);
   position: absolute;
   top: 20px;
   left: 20px;
-  
 }
 
 .nohab {
@@ -160,7 +176,7 @@ body {
 }
 .mage {
   max-width: 200px;
-  height: 200px;
+  height: 150px;
   margin-bottom: -250px;
   border-radius: 50%;
   border: 5px solid rgb(57, 125, 173);
@@ -183,16 +199,17 @@ body {
 }
 @media (max-width: 768px) {
   .resident {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 568px) {
   .resident {
-    grid-template-columns: repeat(2, 1fr);
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .container {
     font-size: 15px;
   }
-  
 }

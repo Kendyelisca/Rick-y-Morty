@@ -24,7 +24,7 @@ const ResidentInfo = ({ urlResident }) => {
         <div className="container">
           <article className="img-container">
             <div>
-              <img className="img" src={residentInfo.image} alt={residentInfo.name} />
+              <img className="imgpro" src={residentInfo.image} alt={residentInfo.name} />
             </div>
             <h3>{residentInfo.name}</h3>
             <ul className="card___ul">

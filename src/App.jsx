@@ -4,7 +4,6 @@ import { getRandomNumber } from './utiles/getRandomNumber';
 import Location from './components/Location';
 import ResidentInfo from './components/ResidentInfo';
 import ResidentList from './components/ResidentList';
-import image from './assets/RICK-MORTY.webp';
 import './index.css';
 const App = () => {
   const [locationInfo, setLocationInfo] = useState(null);
@@ -42,7 +41,10 @@ const App = () => {
   return (
     <div className="big-container">
       <div className="topIm">
-        <img src={image} alt="" />
+        <img src={'./mortyApp.webp'} alt="" className="imageStyle " />
+      </div>
+      <div className="topText">
+        <h1>Rick and Morty Locations Wiki</h1>
       </div>
       <form className="form">
         <input
