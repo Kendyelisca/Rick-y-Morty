@@ -44,7 +44,7 @@ const App = () => {
         <img src={'./mortyApp.webp'} alt="" className="imageStyle " />
       </div>
       <div className="topText">
-        <h1>Rick and Morty Locations Wiki</h1>
+        <h1>Rick and Morty Wiki Locations</h1>
       </div>
       <form className="form">
         <input

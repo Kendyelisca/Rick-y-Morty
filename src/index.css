@@ -9,13 +9,14 @@ body {
   transition: 0.5s;
   background-color: #05292E;
   font-family: sans-serif;
+  
 }
 .big-container {
   position: relative;
 }
 .topIm {
   height: 500px;
-  width: 100%;
+  width: 100vw;
 }
 
 .topIm img {
