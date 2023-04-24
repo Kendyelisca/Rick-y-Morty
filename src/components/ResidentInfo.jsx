@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../index.css';
 import image1 from '../assets/heart.svg';
 import image2 from '../assets/skull.png';
+import Nohab from './Nohab';
 
 const ResidentInfo = ({ urlResident }) => {
   const [residentInfo, setResidentInfo] = useState(null);
@@ -20,7 +21,7 @@ const ResidentInfo = ({ urlResident }) => {
   }, []);
   return (
     <>
-      {residentInfo && (
+      {residentInfo ? (
         <div className="container">
           <article className="img-container">
             <div>
@@ -53,6 +54,8 @@ const ResidentInfo = ({ urlResident }) => {
             </ul>
           </article>
         </div>
+      ) : (
+        <Nohab />
       )}
     </>
   );

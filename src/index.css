@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 body {
   position: relative;
@@ -28,6 +29,8 @@ body {
 }
 .topText {
   padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: #20b2aa;
   text-align: center;
 }
@@ -145,7 +148,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 20px;
 }
 .image1 {
   max-width: 35px;
@@ -173,7 +176,6 @@ body {
 .nohab {
   width: 100%;
   height: 200px;
-  margin-bottom: -100px;
 }
 .mage {
   max-width: 200px;

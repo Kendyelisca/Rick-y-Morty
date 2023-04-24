@@ -5,6 +5,9 @@ import Location from './components/Location';
 import ResidentInfo from './components/ResidentInfo';
 import ResidentList from './components/ResidentList';
 import './index.css';
+import Footer from './components/Footer';
+import Nohab from './components/Nohab';
+
 const App = () => {
   const [locationInfo, setLocationInfo] = useState(null);
   const [idLocationValue, setidLocationValue] = useState('');
@@ -63,11 +66,13 @@ const App = () => {
         />
       </form>
       <div className="Greenbar"></div>
+
       <div className="residentes">
         {locationInfo && <Location {...locationInfo} />}
         {locationInfo && <ResidentList residents={locationInfo.residents} />}
-        <footer className="footer">&copy; Made with love in Academlo.</footer>
       </div>
+
+      <Footer />
     </div>
   );
 };
