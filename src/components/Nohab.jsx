@@ -6,7 +6,9 @@ const Nohab = () => {
   return (
     <div className="nohab">
       <p>No habitants to show now..</p>
-      <img className="mage" src={mage} alt="" />
+      <div className="mage">
+        <img src={mage} alt="No habitants" />
+      </div>
     </div>
   );
 };

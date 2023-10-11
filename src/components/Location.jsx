@@ -3,7 +3,7 @@ import '../index.css';
 
 const Location = ({ name, type, dimension, residents }) => {
   return (
-    <section className="pink-bar">
+    <section className="location">
       <h2>{name}</h2>
       <ul>
         <li>

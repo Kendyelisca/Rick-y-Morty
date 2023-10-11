@@ -21,44 +21,39 @@ const ResidentInfo = ({ urlResident }) => {
   }, []);
   return (
     <>
-      {residentInfo ? (
-        <div className="container">
-          <article className="img-container">
-            <div>
-              <img className="imgpro" src={residentInfo.image} alt={residentInfo.name} />
-            </div>
-            <h3>{residentInfo.name}</h3>
-            <ul className="card___ul">
-              <li>
-                <span>Specie: </span>
-                {residentInfo.species}
-              </li>
-              <li>
-                <span>Status: </span>
-                {residentInfo.status}
-                {residentInfo.status === 'Alive' && (
-                  <img className="image1" src={image1} alt="Alive Icon" />
-                )}
-                {residentInfo.status === 'Dead' && (
-                  <img className="image2" src={image2} alt="Dead Icon" />
-                )}
-              </li>
-              <li>
-                <span>Origin: </span>
-                {residentInfo.origin.name}
-              </li>
-              <li>
-                <span>Appearance in episodes: </span>
-                {residentInfo.episode.length}
-              </li>
-            </ul>
-          </article>
-        </div>
-      ) : (
-        <Nohab />
+      {residentInfo && (
+        <article className="container">
+          <div className="img-holder">
+            <img className="imgpro" src={residentInfo.image} alt={residentInfo.name} />
+          </div>
+          <h3>{residentInfo.name}</h3>
+          <ul className="card___ul">
+            <li>
+              <span>Specie: </span>
+              {residentInfo.species}
+            </li>
+            <li>
+              <span>Status: </span>
+              {residentInfo.status}
+              {residentInfo.status === 'Alive' && (
+                <img className="alive" src={image1} alt="Alive Icon" />
+              )}
+              {residentInfo.status === 'Dead' && (
+                <img className="dead" src={image2} alt="Dead Icon" />
+              )}
+            </li>
+            <li>
+              <span>Origin: </span>
+              {residentInfo.origin.name}
+            </li>
+            <li>
+              <span>Appearance in episodes: </span>
+              {residentInfo.episode.length}
+            </li>
+          </ul>
+        </article>
       )}
     </>
   );
 };
-
 export default ResidentInfo;

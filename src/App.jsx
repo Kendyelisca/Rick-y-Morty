@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { getRandomNumber } from './utiles/getRandomNumber';
 import Location from './components/Location';
-import ResidentInfo from './components/ResidentInfo';
 import ResidentList from './components/ResidentList';
 import './index.css';
 import Footer from './components/Footer';
 import Nohab from './components/Nohab';
+import Header from './components/Header';
 
 const App = () => {
   const [locationInfo, setLocationInfo] = useState(null);
@@ -42,38 +42,17 @@ const App = () => {
   }, []);
 
   return (
-    <div className="big-container">
-      <div className="topIm">
-        <img src={'./mortyApp.webp'} alt="" className="imageStyle " />
-      </div>
-      <div className="topText">
-        <h1>Rick and Morty Wiki Locations</h1>
-      </div>
-      <form className="form">
-        <input
-          className="text-black input-text"
-          type="search"
-          name="id-location"
-          value={idLocationValue}
-          onChange={idLocationHandleChange}
-          placeholder="Type a number between 1 and 126"
-        />
-        <input
-          className="input-submit"
-          onClick={handleSubmit}
-          type="submit"
-          value="Search"
-        />
-      </form>
-      <div className="Greenbar"></div>
-
-      <div className="residentes">
-        {locationInfo && <Location {...locationInfo} />}
-        {locationInfo && <ResidentList residents={locationInfo.residents} />}
-      </div>
-
+    <>
+      <Header
+        idLocationHandleChange={idLocationHandleChange}
+        idLocationValue={idLocationValue}
+        handleSubmit={handleSubmit}
+      />
+      {locationInfo && <Location {...locationInfo} />}
+      {locationInfo && <ResidentList residents={locationInfo.residents} />}
+      {locationInfo && locationInfo.residents.length === 0 && <Nohab />}
       <Footer />
-    </div>
+    </>
   );
 };
 

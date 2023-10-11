@@ -2,29 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-  overflow-x: hidden;
 }
 body {
   position: relative;
   transition: 0.5s;
   background-color: #05292E;
   font-family: sans-serif;
-  
-}
-.big-container {
-  position: relative;
-}
-.topIm {
-  height: 500px;
-  width: 100vw;
-  overflow-y: hidden;
 }
 
+/*Header style*/
+.topIm {
+  height: 400px;
+  width: 100%;
+}
 .topIm img {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 100%;
   height: 100%;
 }
@@ -32,26 +23,30 @@ body {
   padding-top: 30px;
   padding-left: 10px;
   padding-right: 10px;
-  color: #20b2aa;
+  color: #7aece7;
   text-align: center;
 }
-
-.form {
+.form-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.form {
+  width: 500px;
   background-color: #062226;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .input-text {
-  width: 50%;
+  width: 70%;
   margin: 20px;
   height: 30px;
 }
 .input-submit {
-  width: 10%;
+  width: 20%;
   font-size: 18px;
   font-weight: 600;
   margin-right: 20px;
@@ -63,17 +58,21 @@ body {
   color: white;
 }
 .input-text:hover {
-  border: 1px solid rgb(46, 46, 138);
+  border: 1px solid rgb(48, 154, 80);
 }
 .input-submit:hover {
-  background-color: rgb(5, 16, 137);
+  background-color: rgb(60, 248, 239);
   color: white;
   cursor: pointer;
 }
-.pink-bar {
+
+/* Location style*/
+.location {
   width: 100%;
-  height: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #062226;
+  margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -82,65 +81,55 @@ body {
   text-align: center;
   color: white;
   line-height: 25px;
-  padding-top: 50px;
 }
-.pink-bar ul li {
+.location ul li {
   list-style: none;
-  
 }
-.pink-bar h2 {
+.location h2 {
   padding-bottom: 20px;
   color: #7fff00;
 }
-/* .img-container {
-  width: 100%;
-  height: 100%;
-  color: rgb(166, 17, 17);
-} */
+
+/*ResidentInfo style*/
 .resident {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center; 
   width: 100%;
-  align-items: center;
 }
 .container {
   color: white;
   margin: 20px;
-  max-width: 100%;
+  max-width: 300px;
   border-radius: 15px;
   padding-bottom: 20px;
   background-color:#062226;
   transition: 0.5s;
   position: relative;
 }
-.container ul li {
-  padding-left: 10px;
-}
 .container h3 {
   padding-left: 10px;
-  
+  padding-top: 15px;
 }
+.container ul li {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
 .imgpro{
   border-radius: 15px 15px 0 0;
+  height: 250px;
 }
 .container img {
   width: 100%;
-  object-fit: cover;
+  
 }
-
 .card___ul li {
   list-style: none;
 }
-.residentes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  margin-top: 60px;
-  flex-direction: column;
-  line-height: 1.5;
-}
+
+/* Footer style*/
 .footer {
   height: 70px;
   width: 100%;
@@ -151,7 +140,9 @@ body {
   align-items: center;
   margin-top: 20px;
 }
-.image1 {
+
+/*ResidentInfo style*/
+.alive {
   max-width: 35px;
   height: 30px;
   background-color: #7fff00;
@@ -164,7 +155,7 @@ body {
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
-.image2 {
+.dead {
   max-width: 35px;
   height: 30px;
   border-radius: 50%;
@@ -172,18 +163,6 @@ body {
   position: absolute;
   top: 20px;
   left: 20px;
-}
-
-.nohab {
-  width: 100%;
-  height: 200px;
-}
-.mage {
-  max-width: 200px;
-  height: 150px;
-  margin-bottom: -250px;
-  border-radius: 50%;
-  border: 5px solid rgb(57, 125, 173);
 }
 @keyframes cool {
   0% {
@@ -201,12 +180,44 @@ body {
     opacity: 1;
   }
 }
-@media (max-width: 768px) {
+
+/*Nohab style*/
+.nohab {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.mage {
+  width: 300px;
+  height: 300px;
+}
+.mage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/*Global style*/
+@media (max-width: 1200px) {
+  .resident {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 960px) {
   .resident {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 568px) {
+@media (max-width: 738px) {
+  .resident {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 538px) {
   .resident {
     display: flex;
     flex-direction: column;
